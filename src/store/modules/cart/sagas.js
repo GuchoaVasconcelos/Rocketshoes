@@ -1,4 +1,5 @@
 import api from '../../../services/api';
+import history from '../../../services/history';
 import { call, put, all, takeLatest, select } from 'redux-saga/effects';
 import { addToCartSuccess, updateAmountSuccess } from './action';
 import { formatPrice } from '../../../util/format';
@@ -32,6 +33,7 @@ function* addToCart({ id }) {
     };
 
     yield put(addToCartSuccess(data));
+    history.push('/cart');
   }
 }
 
