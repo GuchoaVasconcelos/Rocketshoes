@@ -33,7 +33,6 @@ class Home extends Component {
   render() {
     const { products } = this.state;
     const { amount } = this.props;
-    console.log(amount);
 
     return (
       <ProductList>
